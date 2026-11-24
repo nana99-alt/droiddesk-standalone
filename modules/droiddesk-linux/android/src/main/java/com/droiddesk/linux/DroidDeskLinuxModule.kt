@@ -479,7 +479,7 @@ class DroidDeskLinuxModule : Module() {
   private fun startDesktop(): Map<String, Any?> {
     check(isInstalled()) { "Siapkan Ubuntu terlebih dahulu." }
     synchronized(lock) { check(!busy) { "Operasi lain sedang berlangsung." }; busy = true }
-    try {
+    return try {
       if (isAlive(vncProcess) && isAlive(websockifyProcess)) return state()
       stopProcesses()
       ensureProot()
