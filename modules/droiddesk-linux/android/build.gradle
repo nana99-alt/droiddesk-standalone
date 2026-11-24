@@ -1,0 +1,16 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+android {
+  namespace 'com.droiddesk.linux'
+  defaultConfig {
+    minSdkVersion 26
+  }
+}
+
+dependencies {
+  implementation 'com.facebook.react:react-android'
+  implementation 'org.apache.commons:commons-compress:1.27.1'
+}
